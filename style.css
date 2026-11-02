@@ -1,0 +1,406 @@
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #593746;
+    background: #fff8f7;
+    overflow-x: hidden;
+}
+
+.top {
+    text-align: center;
+    padding: 12px;
+    background: #ffe7ed;
+    color: #8d3655;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 7%;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #b94368;
+}
+
+.nav-links a {
+    color: #593746;
+    text-decoration: none;
+    margin: 0 7px;
+}
+
+.nav-links a:hover {
+    color: #e85d87;
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        #fff8f7,
+        #ffe4ec,
+        #fff0e5
+    );
+}
+
+.hero-content {
+    max-width: 750px;
+    z-index: 1;
+}
+
+.heart {
+    font-size: 45px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.small-title {
+    color: #b94368;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 8vw, 85px);
+    color: #8d3655;
+    margin: 20px 0;
+}
+
+h1 span {
+    color: #e85d87;
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 580px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+button {
+    padding: 14px 23px;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #e85d8733;
+}
+
+.primary {
+    background: #e85d87;
+    color: white;
+}
+
+.secondary {
+    background: white;
+    color: #b94368;
+    border: 1px solid #f5c7d4;
+}
+
+section {
+    padding: 75px 7%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 5vw, 45px);
+    color: #8d3655;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    line-height: 1.8;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border: 1px solid #f8dce4;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px #8e3b5710;
+}
+
+.emoji {
+    font-size: 40px;
+}
+
+.card h3 {
+    color: #b94368;
+}
+
+.card p {
+    line-height: 1.7;
+}
+
+.letter-box {
+    max-width: 750px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 25px;
+    background: linear-gradient(
+        135deg,
+        #f8b7ca,
+        #ffe9d8
+    );
+}
+
+.letter {
+    background: white;
+    border-radius: 18px;
+    padding: clamp(25px, 6vw, 45px);
+    line-height: 1.9;
+}
+
+.letter h3 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: #b94368;
+}
+
+.signature {
+    text-align: right;
+    font-family: Georgia, serif;
+    color: #b94368;
+    font-size: 19px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.photo {
+    min-height: 220px;
+    border: 2px dashed #efb8c9;
+    border-radius: 25px;
+    background: linear-gradient(
+        145deg,
+        #ffe4eb,
+        #fff3e8
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #8d3655;
+}
+
+.big {
+    font-size: 40px;
+}
+
+.photo p {
+    line-height: 1.6;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.surprise-box {
+    max-width: 720px;
+    margin: auto;
+    padding: 40px 25px;
+    text-align: center;
+    background: white;
+    border: 1px solid #f7d5df;
+    border-radius: 30px;
+    box-shadow: 0 12px 30px #8e3b5712;
+}
+
+#message {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 20px;
+    background: #fff0f4;
+    line-height: 1.8;
+}
+
+#message.show {
+    display: block;
+    animation: appear 0.5s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #956477;
+}
+
+.decoration {
+    position: absolute;
+    font-size: 35px;
+    opacity: 0.6;
+    animation: bob 5s infinite ease-in-out;
+}
+
+.d1 {
+    top: 15%;
+    left: 10%;
+}
+
+.d2 {
+    top: 25%;
+    right: 10%;
+}
+
+.d3 {
+    bottom: 15%;
+    left: 15%;
+}
+
+.d4 {
+    bottom: 15%;
+    right: 15%;
+}
+
+.floating-heart {
+    position: fixed;
+    z-index: 100;
+    pointer-events: none;
+    font-size: 25px;
+    animation: floatUp 1.8s forwards;
+}
+
+@keyframes heartbeat {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes bob {
+    50% {
+        transform: translateY(-18px) rotate(8deg);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatUp {
+    to {
+        opacity: 0;
+        transform: translateY(-150px) scale(1.5);
+    }
+}
+
+/* Mobile-friendly design */
+@media (max-width: 700px) {
+    nav {
+        justify-content: center;
+    }
+
+    .nav-links {
+        text-align: center;
+        line-height: 2.2;
+    }
+
+    .cards,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .decoration {
+        font-size: 25px;
+    }
+}
+
+.upload-btn {
+    display: inline-block;
+    background: #e85d87;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 20px 0;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.upload-btn:hover {
+    background: #c9416b;
+    transform: scale(1.05);
+}
+
+.memory-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.memory-gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(232, 93, 135, 0.2);
+    transition: transform 0.3s;
+}
+
+.memory-gallery img:hover {
+    transform: scale(1.04);
+}
